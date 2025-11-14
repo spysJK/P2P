@@ -15,6 +15,7 @@ body {
     display: flex;
     justify-content: center;
     padding: 20px;
+    width: 100%;
 }
 
 /* ================================
@@ -220,102 +221,116 @@ body {
 }
 
 /* ================================
-   RESPONSIVIDADE
+   RESPONSIVIDADE REAL
 ================================ */
 
-/* ----------- Tablets / Telas médias (≤ 900px) ----------- */
+/* ----------- Tablets grandes (≤ 1200px) ----------- */
+@media (max-width: 1200px) {
+    .container {
+        gap: 20px;
+    }
+}
 
+/* ----------- Tablets / telas médias (≤ 900px) ----------- */
 @media (max-width: 900px) {
 
     body {
-        padding: 10px;
+        padding: 0;
     }
 
     .container {
         grid-template-columns: 1fr;
+        max-width: 100%;
+        width: 100%;
+        gap: 20px;
     }
 
     .sidebar {
-        order: 0;
-        border-radius: 14px;
+        width: 100%;
+        border-radius: 0;
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.05);
     }
 
     .nav {
         flex-direction: row;
         flex-wrap: wrap;
-        gap: 8px;
+        gap: 10px;
     }
 
     .nav a {
         flex: 1;
         text-align: center;
-        padding: 10px;
     }
 
     .grid-2 {
         grid-template-columns: 1fr;
+        gap: 20px;
     }
 }
 
 /* ----------- Celulares (≤ 600px) ----------- */
-
 @media (max-width: 600px) {
 
+    .container {
+        padding: 0 10px;
+    }
+
     .sidebar {
-        padding: 20px;
+        padding: 20px 15px;
     }
 
     .profile img {
-        width: 55px;
-        height: 55px;
+        width: 50px;
+        height: 50px;
     }
 
     .price-big {
-        font-size: 1.7rem;
+        font-size: 1.6rem;
     }
 
     .row {
         flex-direction: column;
+        gap: 15px;
     }
 
     .input {
-        font-size: 1rem;
         padding: 12px;
+        font-size: 0.95rem;
     }
 
     .primary {
-        font-size: 1rem;
         padding: 12px;
+        font-size: 1rem;
     }
 
     .contact-grid {
         grid-template-columns: 1fr;
     }
+
+    .card {
+        padding: 20px;
+    }
 }
 
 /* ----------- Celulares pequenos (≤ 400px) ----------- */
-
 @media (max-width: 400px) {
 
-    body {
-        padding: 5px;
-    }
-
-    .card {
-        padding: 18px;
+    .icon {
+        padding: 7px 10px;
+        font-size: 0.85rem;
     }
 
     .price-big {
-        font-size: 1.5rem;
-    }
-
-    .icon {
-        padding: 8px 12px;
-        font-size: 0.9rem;
+        font-size: 1.4rem;
     }
 
     .nav a {
         padding: 8px;
-        font-size: 0.85rem;
+        font-size: 0.8rem;
+    }
+
+    .card {
+        padding: 16px;
     }
 }
