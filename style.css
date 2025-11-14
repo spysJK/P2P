@@ -267,6 +267,10 @@ body {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+    .profile
+    {
+        justify-content: center;
+    }
 }
 
 /* ----------- Celulares (≤ 600px) ----------- */
@@ -330,7 +334,10 @@ body {
         font-size: 0.8rem;
     }
 
+
     .card {
         padding: 16px;
+
     }
+ 
 }
