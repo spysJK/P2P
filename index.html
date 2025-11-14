@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>P2P USDT Trading</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container fade-in">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+        <div class="profile">
+            <img src="./wa.jpg" alt="Foto Perfil">
+            <div class="info">
+                <h3>S.P.Y</h3>
+                <p>• P2P</p>
+            </div>
+        </div>
+
+        <div class="stat-list">
+            <div class="stat">Taxa 6%</div>
+            <div class="stat">Online ✔</div>
+            <div class="stat">+150 vendas</div>
+            <div class="stat">Alta reputação</div>
+        </div>
+
+        <nav class="nav">
+            <a class="active" href="#">Dashboard</a>
+            <a href="#">Transações</a>
+            <a href="#">Histórico</a>
+            <a href="#">Segurança</a>
+        </nav>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <div class="grid-2">
+
+            <!-- CARD USDT -->
+            <div class="card">
+                <div class="market">
+                    <div class="left">
+                        <div class="symbol">
+                            <div class="icon">USDT</div>
+                            <div class="info">
+                                <h3>Tether (TRC20)</h3>
+                                <p>Cotação em tempo real</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="price-big" id="livePrice">R$ --</div>
+                        <div class="price-sub">Preço por unidade</div>
+                    </div>
+                </div>
+
+                <!-- SIMULADOR -->
+                <div class="order-box">
+
+                    <div class="row">
+                        <div class="col">
+                            <label class="muted">Valor em Reais</label>
+                            <input id="brl" type="number" class="input" oninput="calcUSDT()">
+                        </div>
+
+                        <div class="col">
+                            <label class="muted">Receberá em USDT</label>
+                            <input id="usdt" type="number"  class="input" oninput="calcBRL()">
+                        </div>
+                    </div>
+
+                    <button class="primary" onclick="calcUSDT()">Calcular automaticamente</button>
+                </div>
+            </div>
+
+            <!-- CARD CONTATO -->
+            <div class="card">
+                <h3 style="margin-bottom:10px;">Contato imediato</h3>
+
+                <div class="contact-grid">
+                    <a class="contact-btn" href="#">WhatsApp</a>
+                    <a class="contact-btn" href="#">Telegram</a>
+                </div>
+
+                <div class="info-list">
+                    <div class="info-item">TRC20 • Instantâneo</div>
+                    <div class="info-item">BRL via Pix</div>
+                    <div class="info-item">Sem taxas</div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

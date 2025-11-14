@@ -1,0 +1,321 @@
+/* ================================
+   RESET / BASE
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background: #0d0d0f;
+    color: #ddd;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* ================================
+   GRID PRINCIPAL
+================================ */
+
+.container {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    max-width: 1500px;
+    width: 100%;
+    gap: 30px;
+}
+
+/* ================================
+   SIDEBAR
+================================ */
+
+.sidebar {
+    background: #111114;
+    border-right: 1px solid rgba(255,255,255,0.05);
+    padding: 30px 20px;
+    border-radius: 18px;
+    height: max-content;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.profile img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.profile .info h3 {
+    font-weight: 600;
+}
+
+.stat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.stat {
+    background: #161618;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.nav a {
+    background: #161618;
+    color: #ccc;
+    text-decoration: none;
+    padding: 12px 16px;
+    border-radius: 10px;
+    transition: 0.2s;
+}
+
+.nav a.active {
+    background: #b00020;
+    color: white;
+}
+
+/* ================================
+   MAIN / CARDS
+================================ */
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card {
+    background: #111114;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+
+/* ================================
+   BLOCO DE COTAÇÃO
+================================ */
+
+.market {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.symbol {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon {
+    background: #b00020;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 12px;
+    font-weight: 700;
+}
+
+.price-big {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.price-sub {
+    color: #777;
+}
+
+/* ================================
+   SIMULADOR
+================================ */
+
+.order-box {
+    margin-top: 25px;
+}
+
+.row {
+    display: flex;
+    gap: 20px;
+}
+
+.col {
+    flex: 1;
+}
+
+.input {
+    width: 100%;
+    background: #161618;
+    color: white;
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
+}
+
+.primary {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    background: #b00020;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+/* ================================
+   CONTATO
+================================ */
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.contact-btn {
+    background: #161618;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.info-list {
+    margin-top: 20px;
+}
+
+.info-item {
+    background: #161618;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* ================================
+   RESPONSIVIDADE
+================================ */
+
+/* ----------- Tablets / Telas médias (≤ 900px) ----------- */
+
+@media (max-width: 900px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        order: 0;
+        border-radius: 14px;
+    }
+
+    .nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .nav a {
+        flex: 1;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ----------- Celulares (≤ 600px) ----------- */
+
+@media (max-width: 600px) {
+
+    .sidebar {
+        padding: 20px;
+    }
+
+    .profile img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .price-big {
+        font-size: 1.7rem;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .input {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .primary {
+        font-size: 1rem;
+        padding: 12px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ----------- Celulares pequenos (≤ 400px) ----------- */
+
+@media (max-width: 400px) {
+
+    body {
+        padding: 5px;
+    }
+
+    .card {
+        padding: 18px;
+    }
+
+    .price-big {
+        font-size: 1.5rem;
+    }
+
+    .icon {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+
+    .nav a {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+}
