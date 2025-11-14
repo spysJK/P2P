@@ -271,6 +271,19 @@ body {
     {
         justify-content: center;
     }
+    .info{
+        width: 30%;
+    }
+    .info-list{
+        display: flex;
+        align-items: center;
+    }
+    .info-item{
+        text-align: center;
+        font-size: 0.9rem;
+        line-height: 1.2;
+        padding: 8px;
+       
 }
 
 /* ----------- Celulares (≤ 600px) ----------- */
