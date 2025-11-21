@@ -1,7 +1,6 @@
 /* ================================
    RESET / BASE
 ================================ */
-
 * {
     margin: 0;
     padding: 0;
@@ -145,25 +144,14 @@ body {
     font-weight: 700;
 }
 
-.price-sub {
-    color: #777;
-}
-
 /* ================================
-   SIMULADOR
+   SIMULADOR / NOVO
 ================================ */
 
-.order-box {
-    margin-top: 25px;
-}
-
-.row {
+.mode-buttons {
     display: flex;
-    gap: 20px;
-}
-
-.col {
-    flex: 1;
+    gap: 10px;
+    margin-top: 20px;
 }
 
 .input {
@@ -178,15 +166,42 @@ body {
 }
 
 .primary {
-    width: 100%;
-    margin-top: 20px;
+    flex: 1;
     padding: 14px;
     background: #b00020;
     color: white;
     border: none;
     border-radius: 12px;
-    font-size: 1.1rem;
     cursor: pointer;
+}
+
+.package-table {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.package-item {
+    background: #161618;
+    padding: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    transition: .2s;
+}
+
+.package-item:hover {
+    background: #1e1e20;
+}
+
+.result-card {
+    margin-top: 20px;
+    background: #161618;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
 }
 
 /* ================================
@@ -220,137 +235,10 @@ body {
     margin-bottom: 10px;
 }
 
-/* ================================
-   RESPONSIVIDADE REAL
-================================ */
-
-/* ----------- Tablets grandes (≤ 1200px) ----------- */
-@media (max-width: 1200px) {
-    .container {
-        gap: 20px;
-    }
+h3{
+    margin:20px;
 }
 
-/* ----------- Tablets / telas médias (≤ 900px) ----------- */
-@media (max-width: 900px) {
-
-    body {
-        padding: 0;
-    }
-
-    .container {
-        grid-template-columns: 1fr;
-        max-width: 100%;
-        width: 100%;
-        gap: 20px;
-    }
-
-    .sidebar {
-        width: 100%;
-        border-radius: 0;
-        border-right: none;
-        border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-
-    .nav {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    .nav a {
-        flex: 1;
-        text-align: center;
-    }
-
-    .grid-2 {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .profile
-    {
-        justify-content: center;
-    }
-    .info{
-        width: 30%;
-    }
-    .info-list{
-        display: flex;
-        align-items: center;
-    }
-    .info-item{
-        text-align: center;
-        font-size: 0.9rem;
-        line-height: 1.2;
-        padding: 8px;
-       
-}
-
-/* ----------- Celulares (≤ 600px) ----------- */
-@media (max-width: 600px) {
-
-    .container {
-        padding: 0 10px;
-    }
-
-    .sidebar {
-        padding: 20px 15px;
-    }
-
-    .profile img {
-        width: 50px;
-        height: 50px;
-    }
-
-    .price-big {
-        font-size: 1.6rem;
-    }
-
-    .row {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .input {
-        padding: 12px;
-        font-size: 0.95rem;
-    }
-
-    .primary {
-        padding: 12px;
-        font-size: 1rem;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        padding: 20px;
-    }
-}
-
-/* ----------- Celulares pequenos (≤ 400px) ----------- */
-@media (max-width: 400px) {
-
-    .icon {
-        padding: 7px 10px;
-        font-size: 0.85rem;
-    }
-
-    .price-big {
-        font-size: 1.4rem;
-    }
-
-    .nav a {
-        padding: 8px;
-        font-size: 0.8rem;
-    }
-
-
-    .card {
-        padding: 16px;
-
-    }
- 
+.muted{
+    margin: 20px;
 }

@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>P2P USDT Trading</title>
+    <title>P2P</title>
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-
 <div class="container fade-in">
 
-    <!-- SIDEBAR (ENVOLVIDO PARA MENU MOBILE) -->
+    <!-- SIDEBAR -->
     <aside class="sidebar" id="sidebarMenu">
 
         <div class="profile">
@@ -26,7 +24,7 @@
         </div>
 
         <div class="stat-list">
-            <div class="stat">Taxa 6%</div>
+            <div class="stat">Taxa 3%</div>
             <div class="stat">Online ✔</div>
             <div class="stat">+150 vendas</div>
             <div class="stat">Alta reputação</div>
@@ -59,26 +57,18 @@
 
                     <div>
                         <div class="price-big" id="livePrice">R$ --</div>
-                      
                     </div>
                 </div>
 
-                <!-- SIMULADOR -->
+                <!-- MODO DE VENDA -->
                 <div class="order-box">
 
-                    <div class="row">
-                        <div class="col">
-                            <label class="muted">Valor em Reais</label>
-                            <input id="brl" type="number" class="input" oninput="calcUSDT()">
-                        </div>
-
-                        <div class="col">
-                            <label class="muted">Receberá em USDT</label>
-                            <input id="usdt" type="number" class="input" oninput="calcBRL()">
-                        </div>
+                    <div class="mode-buttons">
+                        <button onclick="setMode('pacotes')" class="primary">Pacotes</button>
+                        <button onclick="setMode('faixas')" class="primary">Por quantidade</button>
                     </div>
 
-                    <button class="primary" onclick="calcUSDT()">Calcular automaticamente</button>
+                    <div id="dynamicArea"></div>
                 </div>
             </div>
 
