@@ -62,7 +62,7 @@ async function getPrice() {
 }
 
 getPrice();
-setInterval(getPrice, 5000);
+// setInterval(getPrice, 5000);
 
 
 /* ================================
@@ -107,7 +107,7 @@ function selectPackage(usdt, brlFinal) {
         <div class="result-card">
             <p><strong>${usdt} USDT</strong> por</p>
             <h2>R$ ${brlFinal.toFixed(2)}</h2>
-            <p style="font-size:12px;margin-top:5px;color:#777">(+3% já incluído)</p>
+            <p style="font-size:12px;margin-top:5px;color:white">(+3% já incluído)</p>
         </div>
     `;
 }

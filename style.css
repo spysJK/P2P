@@ -295,7 +295,16 @@ h3{
     .grid-2 {
         grid-template-columns: 1fr;
     }
-}
+    .contact-btn {
+        background: #161618;
+        color: white;
+        text-decoration: none;
+        text-align: center;
+        padding: 12px;
+        border-radius: 10px;
+    }
+    
+    
 
 /* ================================
    RESPONSIVIDADE - MOBILE
@@ -319,7 +328,9 @@ h3{
     .profile {
         display: flex;
         align-items: center;
-    }
+        flex-direction: column;
+        padding: 10px;
+  }
 
     .stat-list {
         display: none;
@@ -368,6 +379,9 @@ h3{
         padding: 10px;
         font-size: 0.9rem;
     }
+    .contact-btn:hover{
+        background-color:#b00020;
+    }
 
     h3 {
         margin: 15px;
@@ -381,6 +395,13 @@ h3{
     .info-list{
         display: none;
     }
+    .market {
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+}
+.info p{
+    display:none;
 }
 
 /* ================================
@@ -425,11 +446,11 @@ h3{
     }
 
     .market {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-    }
 
+        flex-direction: row;
+        align-items: center;
+        padding: 20px;
+    }
     .price-big {
         font-size: 1.3rem;
     }
@@ -481,4 +502,4 @@ h3{
     .info-list{
         display: none;
     }
-}
+
