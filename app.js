@@ -130,8 +130,7 @@ function calcTier() {
         <div class="result-card">
             <p>${amount} USDT × R$ ${rate.toFixed(2)}</p>
             <h2>Total: R$ ${total.toFixed(2)}</h2>
-            <p style="font-size:12px;margin-top:5px;color:#777">(+3% já incluído)</p>
-        </div>
+            <p style="font-size:12px;margin-top:5px;color:white">(+3% já incluído)</p>
     `;
 }
 
